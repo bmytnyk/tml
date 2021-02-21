@@ -30,3 +30,19 @@
 *.exe
 *.out
 *.app
+
+# Solution and project files
+*.vcxproj*
+*.sln
+
+# Build directories
+Debug/*
+Release/*
+tml.dir/*
+Win32/*
+.vs/*
+
+# cmake files
+*.cmake
+CMakeCache.txt
+CMakeFiles
