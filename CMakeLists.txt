@@ -4,6 +4,12 @@ project(tml)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-add_library(tml src/operation.cpp)
+file(GLOB CPP_SOURCES src/*.cpp)
+
+file(GLOB HEADERS include/tml/*.h)
+
+set(ALL_SOURCES ${CPP_SOURCES} ${HEADERS})
+
+add_library(tml ${ALL_SOURCES})
 
 target_include_directories(tml PUBLIC "${PROJECT_SOURCE_DIR}/include/tml")
